@@ -1,0 +1,13 @@
+// Questo è un commento in linea
+.error {
+   border: 1px #f00;
+   background-color: #fdd;
+ }
+
+ /*
+ Questo è un commento multilinea
+ */
+ .seriousError {
+   @extend .error;
+   border-width: 3px;
+ }

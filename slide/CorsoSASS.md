@@ -5,7 +5,7 @@ paginate: true
 backgroundColor: #fff
 backgroundImage: url('https://marp.app/assets/hero-background.svg')
 marp: true
-footer: https://github.com/matteobaccan/CorsoAI
+footer: https://github.com/matteobaccan/CorsoSASS
 ---
 
 # Corso SASS
@@ -45,17 +45,17 @@ Ci permette di scrivere fogli di stile CSS in modo più semplice e veloce, con m
 
 Ad esempio, SASS ci permette di:
 
--   Usare variabili
--   Usare funzioni
--   Usare cicli
--   Usare condizioni
--   Usare import
+- Usare variabili
+- Usare funzioni
+- Usare cicli
+- Usare condizioni
+- Usare import
 
 ---
 
 ## SASS - come installarlo
 
-SASS è un preprocessor, quindi per usarlo dobbiamo installarlo sul nostro computer.
+SASS è un preprocessore, quindi per usarlo dobbiamo installarlo sul nostro computer.
 
 Per farlo, dobbiamo installare NodeJS e poi installare SASS tramite il comando:
 
@@ -75,8 +75,8 @@ choco install sass
 
 Una volta installato, possiamo usare SASS in due modi:
 
--   Usando il comando `sass` da terminale
--   Usando un IDE che supporta SASS
+- Usando il comando `sass` da terminale
+- Usando un IDE che supporta SASS
 
 Uso da CLI (Command Line Interface)
 
@@ -86,11 +86,36 @@ sass source/stylesheets/index.scss build/stylesheets/index.css
 
 ---
 
+## SASS - invocato da CLI
+
+```bash
+c:> sass
+Compile Sass to CSS.
+
+Usage: sass <input> [output]
+
+    --[no-]stdin          Read the stylesheet from stdin.
+    --[no-]indented       Use the indented syntax for input from stdin.
+-I, --load-path=<PATH>    A path to use when resolving imports.        
+                          May be passed multiple times.
+
+-s, --style=<NAME>        Output style.
+                          [expanded (default), compressed]
+
+-c, --[no-]color          Whether to emit terminal colors.
+-q, --[no-]quiet          Don't print warnings.
+    --[no-]trace          Print full Dart stack traces for exceptions. 
+-h, --help                Print this usage information.
+    --version             Print the version of Dart Sass.
+```
+
+---
+
 ## SASS - le variabili
 
 Le variabili ci permettono di definire dei valori che possono essere riutilizzati all'interno del nostro foglio di stile.
 
-Le variabili devono iniciar con il simbolo `$` e possono essere di qualsiasi tipo.
+Le variabili devono iniziare  con il simbolo `$` e possono essere di qualsiasi tipo.
 
 ```scss
 $primary-color: #333;
@@ -106,8 +131,8 @@ body {
 
 Le variabili possono essere definite in due modi:
 
--   Globali
--   Locali
+- Globali
+- Locali
 
 Le variabili globali possono essere usate in tutto il foglio di stile, mentre le variabili locali possono essere usate solo all'interno del blocco in cui sono definite.
 
@@ -171,22 +196,26 @@ nav {
 
 ## SASS - proprietà annidate
 
-SAAS ci permette di annidare anche le proprietà, in modo da rendere più leggibile il nostro codice.
+SAAS ci permette di annidare anche le proprietà, per maggior chiarezza del codice.
 
 ```scss
-font: {
-  family: Helvetica, sans-serif;
-  size: 18px;
-  weight: bold;
+.line {
+   font: {
+      family: Lucida Sans Unicode;
+      size:20px;
+      weight: bold;
+   }
 }
 ```
 
 CSS
 
 ```css
-font-family: Helvetica, sans-serif;
-font-size: 18px;
-font-weight: bold;
+.line {
+  font-family: Lucida Sans Unicode;
+  font-size: 20px;
+  font-weight: bold;
+}
 ```
 
 ---
@@ -244,9 +273,24 @@ La direttiva `@extend` ci permette di estendere un selettore con le proprietà d
 
 ---
 
+## SASS - i commenti
+
+SASS ci permette di usare i commenti in due modi:
+
+- Commenti in linea
+- Commenti multilinea
+
+```scss
+// Questo è un commento in linea
+/* Questo è un commento
+   multilinea */
+```
+
+---
+
 ## SASS - le funzioni
 
-SASS ci permette di creare delle funzioni che possono essere riutilizzate all'interno del nostro foglio di stile.
+SASS ci permette di creare delle funzioni che possono essere riutilizzate all'interno del nostro foglio di stile. In questo modo SASS diventa un vero e proprio linguaggio di programmazione.
 
 ```scss
 @function pow($base, $exponent) {
@@ -257,6 +301,18 @@ SASS ci permette di creare delle funzioni che possono essere riutilizzate all'in
   @return $result;
 }
 ```
+
+---
+
+## SASS - tipologie di funzioni
+
+Esistono una serie di funzioni predeterminate da SASS, che ci permettono di manipolare i nostri valori.
+
+- Funzioni per la manipolazione delle stringhe
+- Funzioni per la manipolazione dei colori
+- Funzioni per la manipolazione delle liste
+- Funzioni per la manipolazione dei numeri
+- Funzioni per la manipolazione dei mappe
 
 ---
 

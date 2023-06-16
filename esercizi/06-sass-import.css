@@ -1,0 +1,10 @@
+body {
+  color: #333;
+}
+
+nav ul {
+  margin: 0;
+}
+nav li {
+  display: inline-block;
+}
