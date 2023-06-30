@@ -12,7 +12,7 @@ In questo corso imparerai:
 
 - Come funziona SASS
 - La terminologia di base
-- Ad utilizzare la sintassi di SASS con una serie di esempi disponibili su Codepen.io
+- Ad utilizzare la sintassi di SASS con una serie di esempi
 
 Spero di aiutarti a comprendere meglio come utilizzare SASS e di come introdurlo nel lavoro di tutti i giorni.
 
